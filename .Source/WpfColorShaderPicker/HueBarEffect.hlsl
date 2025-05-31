@@ -2,7 +2,7 @@ sampler2D input : register(s0);
 
 float4 main(float2 uv : TEXCOORD) : COLOR
 {
-    float hue = uv.x * 300.0; // <= теперь справа будет фиолетовый
+    float hue = uv.x * 300.0;
     float c = 1.0;
     float x = (1.0 - abs(fmod(hue / 60.0, 2.0) - 1.0));
     float3 rgb;
